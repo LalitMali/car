@@ -5,17 +5,18 @@ import App from './App'
 import '../bulma/css/bulma.min.css'
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.css'
-import jquery from "jquery"
 import VueRouter from 'vue-router'
 import Home from './View/Home.vue'
 import About from './View/About.vue'
+import vue from 'vue';
+
+
+import VueCarousel from 'vue-carousel';
 
 
 Vue.use(VueRouter)
-
 Vue.use(VueMaterial)
-Vue.use(jquery)
-
+Vue.use(VueCarousel);
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
@@ -38,3 +39,18 @@ new Vue({
   template: '<App/>',
   router: router
 })
+new Vue({
+  el: '#example-1',
+  data: {
+    show: false
+  },
+  computed: {
+    btnText: function() {
+      if(this.show) {
+        return '✕'
+      }
+        return '☰'
+   }
+  }
+})
+ 
