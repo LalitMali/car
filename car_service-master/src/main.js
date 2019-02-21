@@ -7,50 +7,25 @@ import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.css'
 import VueRouter from 'vue-router'
 import Home from './View/Home.vue'
-import About from './View/About.vue'
-import vue from 'vue';
-
-
-import VueCarousel from 'vue-carousel';
-
-
+import listing from './View/listing.vue'
+// import vue from 'vue'
+import VueCarousel from 'vue-carousel'
 Vue.use(VueRouter)
 Vue.use(VueMaterial)
-Vue.use(VueCarousel);
+Vue.use(VueCarousel)
 Vue.config.productionTip = false
-
 /* eslint-disable no-new */
 const routes = [
-{ path: "/", component: Home },
-{ path: "/about", component: About }
-];
-
+  { path: '/', component: Home },
+  { path: '/listing', component: listing }
+]
 const router = new VueRouter({
-
-routes : routes
-
-});
-
-
+  routes: routes
+})
 new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>',
-  router: router
+  template: '<App/>'
+  // router: router
 })
-new Vue({
-  el: '#example-1',
-  data: {
-    show: false
-  },
-  computed: {
-    btnText: function() {
-      if(this.show) {
-        return '✕'
-      }
-        return '☰'
-   }
-  }
-})
- 
