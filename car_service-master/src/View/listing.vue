@@ -208,7 +208,7 @@
        <div class="column product">
        <img src="../assets/150x150.png">
        <p align="center">Product Description</p>
-       <h1 align="center"><b>Price</b></h1>
+       <h1 align="center"><b>$ 15.5</b></h1>
        <h2 align="center">3.7 <i class="material-icons red ">star</i><span> (30)</span></h2>
        </div>
        <div class="column product">
@@ -254,7 +254,6 @@
         </div>
         </div>
         </section>
-
     </div>
 </template>
 

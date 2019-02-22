@@ -8,6 +8,9 @@ import 'vue-material/dist/vue-material.css'
 import VueRouter from 'vue-router'
 import Home from './View/Home.vue'
 import listing from './View/listing.vue'
+import listings from './View/listing2.vue'
+import financecategory from './View/financecategory.vue'
+import quotes from './View/quotes.vue'
 // import vue from 'vue'
 import VueCarousel from 'vue-carousel'
 Vue.use(VueRouter)
@@ -17,7 +20,10 @@ Vue.config.productionTip = false
 /* eslint-disable no-new */
 const routes = [
   { path: '/', component: Home },
-  { path: '/listing', component: listing }
+  { path: '/listing', component: listing },
+  { path: '/listing2', component: listings },
+  { path: '/financecategory', component: financecategory },
+  { path: '/quotes', component: quotes }
 ]
 const router = new VueRouter({
   routes: routes
@@ -27,5 +33,4 @@ new Vue({
   router,
   components: { App },
   template: '<App/>'
-  // router: router
 })
